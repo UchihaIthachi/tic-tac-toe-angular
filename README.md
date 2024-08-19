@@ -1,38 +1,67 @@
-# Game Angular Tic Tac Toe
+# Tic Tac Toe Game
 
-⭕❌ Dive into the classic game of Tic Tac Toe reimagined with the power of Angular! This project brings the timeless strategy game to your browser, featuring a clean and interactive user interface. Enjoy hours of fun with friends or challenge the computer AI. With Angular's simplicity and flexibility, this Tic Tac Toe game is not just a play, but a coding journey too.
+## Overview
 
-Key Features:
+A modern Tic Tac Toe game built with Angular, styled using Tailwind CSS, and enhanced with Angular animations. The game features a clean UI and provides a fun, interactive experience for users.
 
-Angular-powered interface for a seamless and engaging gameplay experience.
-Play against a friend or challenge the computer AI for a strategic showdown.
-Well-documented codebase – perfect for both learning and contributing.
-Responsive design ensures a delightful experience on any device.
-Ready to make your moves? Clone the repository, run the app, and experience Tic Tac Toe in a whole new way with Angular! 🌐✨
+## Features
 
+- **Responsive Design**: Works well on various screen sizes.
+- **Interactive UI**: Displays messages for game state changes.
+- **Player Interaction**: Allows players to make moves and see game results.
+- **Animations**: Smooth transitions and animations for a better user experience.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.11.
+## Tech Stack
 
-## Development server
+- **Frontend**: Angular, Tailwind CSS
+- **Animations**: Angular Animations
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+### Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Node.js**: Ensure you have Node.js installed. You can download it from [nodejs.org](https://nodejs.org/).
 
-## Build
+### Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **Clone the Repository**
 
-## Running unit tests
+   ```bash
+   git clone https://github.com/yourusername/tic-tac-toe.git
+   cd tic-tac-toe
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Install Dependencies**
 
-## Running end-to-end tests
+   ```bash
+   npm install
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Run the Application**
 
-## Further help
+   ```bash
+   ng serve
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   Open your browser and navigate to `http://localhost:4200` to see the application in action.
+
+### Building for Production
+
+To build the application for production, use:
+
+```bash
+ng build --prod
+```
+
+The output will be placed in the `dist/` directory.
+
+### Project Structure
+
+- `src/app/`
+  - `components/` - Contains Angular components for the game.
+  - `services/` - Contains services for game logic (if any).
+  - `animations/` - Defines Angular animations.
+- `src/styles/` - Contains Tailwind CSS styles.
+- `src/environments/` - Environment configurations.
+- `angular.json` - Angular CLI configuration.
+- `tailwind.config.js` - Tailwind CSS configuration.
