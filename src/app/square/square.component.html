@@ -1,0 +1,55 @@
+<div
+  class="outer-container p-6 max-w-lg mx-auto bg-gray-100 rounded-lg shadow-lg flex flex-col items-center justify-center min-h-screen"
+>
+  <!-- Display message to start the game -->
+  <h2
+    *ngIf="newPage"
+    class="text-4xl font-bold text-center text-blue-600 mb-8 transition-transform duration-500"
+  >
+    Let's Play Tic Tac Toe
+  </h2>
+
+  <!-- Display current player -->
+  <h2
+    *ngIf="!champion && !gameDraw && !newPage"
+    class="text-3xl font-semibold text-center text-gray-800 mb-8 transition-transform duration-500"
+  >
+    Current Player: <span class="font-bold text-blue-500">{{ getPlayer }}</span>
+  </h2>
+
+  <!-- Display message if a player has won -->
+  <h2
+    *ngIf="champion"
+    class="text-3xl font-semibold text-center text-green-600 mb-8 transition-transform duration-500"
+  >
+    Player {{ champion }} won!!
+  </h2>
+
+  <!-- Display message if the game is a draw -->
+  <h2
+    *ngIf="gameDraw"
+    class="text-3xl font-semibold text-center text-red-600 mb-8 transition-transform duration-500"
+  >
+    Draw!!
+  </h2>
+
+  <!-- Button to start the game, visible if game has ended or it's a new game -->
+  <button
+    *ngIf="champion || gameDraw || newPage"
+    class="px-8 py-4 text-white bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold shadow-lg transition transform hover:scale-105 duration-300"
+    (click)="startGame()"
+  >
+    Start Game
+  </button>
+
+  <!-- Main game board, rendered if the game is ongoing -->
+  <main *ngIf="!champion && !gameDraw" class="grid grid-cols-3 gap-6 mt-8">
+    <app-game-board
+      *ngFor="let val of square; let i = index"
+      [value]="val"
+      (click)="makeMove(i)"
+      class="w-24 h-24 flex items-center justify-center bg-white border-4 border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100 transition-transform duration-300 ease-in-out transform hover:scale-105"
+    >
+    </app-game-board>
+  </main>
+</div>
